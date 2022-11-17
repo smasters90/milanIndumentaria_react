@@ -1,0 +1,112 @@
+*{
+  box-sizing: border-box;
+}
+/*HEADER*/
+.header__logo{  
+    font-family: 'Square Peg', cursive;
+}
+
+.enlace {
+  text-decoration: none;
+  font-family: 'Square Peg', cursive;
+  font-size: 20px;
+  color: rgba(230, 228, 228, 0.89);
+  list-style-type: none;
+  transition: 0.7s;
+}
+
+.enlace:hover{
+  border-bottom: 1px solid white;
+  font-size: 25px;
+  color: rgba(236, 154, 87, 0.945);
+}
+
+.menu {
+  list-style-type: none;
+  font-size: 0;
+}
+
+/*INDEX*/
+
+@media all and (min-width:768px) {
+  .footer__contenedorImagenes img {
+    width: 5%;
+  }
+
+  .temporada__contenedorImg img{
+    border: 2px solid black;
+    margin: 10px 0px;
+    cursor:pointer;
+  }
+  
+.temporada__contenedorImg img:hover{
+    transform: scale(1.1, 1.1);
+  }
+
+}
+
+@media all and (min-width:1200px){
+  #navbarToggleExternalContent{
+    display: inline;
+  }
+}
+
+/*LOGIN*/
+.mainLogin{
+  background: rgb(246,144,100);
+  background: linear-gradient(rgba(246,144,100,1) 34%, rgba(235,158,58,0.9108018207282913) 100%);
+}
+
+.form__botones input {
+  font-family: 'Inconsolata', monospace;
+  cursor: pointer;
+  border-style: solid;
+  background-color:rgb(112, 161, 206);
+  transition: 0.6s;
+}
+
+.form__botones input:hover{
+  transform: scale(1.1, 1.1);
+}
+
+.form__botones input:active{
+  transform: scaleZ(1.1);
+}
+
+/*MUJER*/
+
+.talle__boton input{
+  width: 70px;
+  height: 40px;
+  background-color: white;
+  border:rgba(230, 228, 228, 0.89) solid 2px;
+}
+
+.talle__boton input:focus{
+  background-color: black;
+  color:white;
+}
+
+.compra__descuento{
+  text-decoration: underline;
+}
+.compra__porcentaje{
+  text-decoration: underline;
+}
+
+.formIndumentaria__agregar{
+  font-family: 'Inconsolata', monospace;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  border: rgba(236, 196, 122, 0.856) solid 3px;
+  transition: 0.6s;
+  color: rgb(245, 245, 245);
+}
+
+.formIndumentaria__agregar:active{
+  transform: scaleZ(1.3);
+}
+
+.formIndumentaria__agregar:hover{
+  transform: scale(1.1, 1.1);
+}

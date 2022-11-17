@@ -1,0 +1,28 @@
+
+%form{
+    font-weight: 900;
+    font-family: 'Inconsolata', monospace;
+    cursor: pointer;
+}
+
+@mixin boton($border, $bgcolor, $transition){
+    border: $border;
+    background-color: $bgcolor;
+    transition: $transition;
+}
+
+$colores:(
+    gris: rgba(230, 228, 228, 0.89),
+    blanco: rgb(255,255,255),
+    naranja: rgba(236, 154, 87, 0.945),
+    negro: rgb(0,0,0),
+    negro-claro: rgba(49, 49, 49, 0.74),
+    naranja-grandiente: rgba(235,158,58,0.9108018207282913),
+    celeste: rgb(112, 161, 206),
+    grisClaro: rgba(196, 194, 194, 0.596),
+    beige: rgb(249, 228, 183),
+    rosa: rgb(228, 61, 200),
+    btn_añadir: rgb(90, 160, 96)
+);
+
+

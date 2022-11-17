@@ -1,0 +1,31 @@
+class Producto{
+    constructor(id,nombre, precio, color, talle, categoria, cantidad){
+        this.id = id
+        this.nombre = nombre;
+        this.precio = precio;
+        this.color = color;
+        this.talle = talle;
+        this.categoria = categoria;
+        this.cantidad = cantidad;
+    }
+}
+
+
+const shortLila = new Producto (3, 'Short Lila', 1299, "", "",'niña',0);
+const monoPerla = new Producto (4, 'Mono Perla', 1129, "", "", 'niñas',0);
+const remeraPerla = new Producto (5, 'Remera Perla', 2449, "", "", 'niña',0);
+const shortWood = new Producto (6, 'Short Wood', 999, "", "", 'niña',0);
+const shortYenny = new Producto (7, 'Short Yenny', 1799, "", "", 'niña',0);
+const shortMonet = new Producto (8, 'Short Money', 1079, "", "", 'niña',0);
+const shortGuanacaste = new Producto (9, 'Short Guanacaste', 1079,"", "", 'niña',0);
+const calzaIndigo = new Producto (10, 'Calza Indigo', 699, "", "", 'niña',0);
+const joggingLondres = new Producto (11, 'Joggin Londres', 1289, "", "", 'niña',0);
+const jeanMartina = new Producto(12, 'Jean Martina', 2149, "", "", 'niña',0);
+const calzaHanna = new Producto (13, 'Calza Hanna', 999, "", "", 'niña',0);
+const jeanFlorence = new Producto (14, 'Jean Florence', 1899, "", "", 'niña',0);
+
+let productos = [shortLila, monoPerla, remeraPerla, shortWood, shortYenny, shortMonet, shortGuanacaste,  calzaIndigo, joggingLondres, jeanMartina, calzaHanna, jeanFlorence];
+
+
+let carrito = [];
+let carritoLs = [];

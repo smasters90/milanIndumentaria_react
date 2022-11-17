@@ -1,0 +1,123 @@
+function agregarPalazo(){
+    input1 = document.getElementById("input1");
+    input2 = document.getElementById("input2");
+    input3 = document.getElementById("input3");
+    cant = document.getElementById("cantidad");
+    colores = document.getElementById("color");
+
+    input1.addEventListener('click', () =>{
+        talles = input1.value;
+        });
+    input2.addEventListener('click', () =>{
+        talles = input2.value;
+    });
+    input3.addEventListener('click', () =>{
+        talles = input3.value;
+    });
+   
+    let talle = talles;
+
+    color = document.getElementById("color").value;
+
+    cantidad = document.getElementById("cantidad").value;
+
+    let palazoAfra = new Producto (1,'Palazo Afra', 6050, color, talle, 'mujer',cantidad);
+
+    if(palazoAfra.color == "" || palazoAfra.talle == "" ||  palazoAfra.cantidad == 0){
+        Swal.fire({
+            position: 'top-center',
+            icon: 'error',
+            title: 'Falta completar algun dato',
+            showConfirmButton: false,
+            timer: 1500
+            })
+    } else {
+        Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Pruducto agregado correctamente!',
+            showConfirmButton: false,
+            timer: 1500
+        });
+        carrito.push(palazoAfra);
+        carritoLs = carrito.map(carroLs => carroLs = {id: carroLs.id, nombre: carroLs.nombre, precio: carroLs.precio, color: carroLs.color, talle: carroLs.talle, categoria: carroLs.categoria, cantidad: carroLs.cantidad});
+        localStorage.setItem('datosProductos', JSON.stringify(carritoLs));
+        colores.value = "";
+        cant.value = 0;
+        talles = "";
+        console.log(carrito);
+    }
+    
+}
+
+function agregarTapado(){
+    input1 = document.getElementById("input4");
+    input2 = document.getElementById("input5");
+    input3 = document.getElementById("input6");
+    cant= document.getElementById("cantidad2");
+    colores = document.getElementById("color2");
+
+    input1.addEventListener('click', () =>{
+        talles = input1.value;
+        });
+    input2.addEventListener('click', () =>{
+        talles = input2.value;
+    });
+    input3.addEventListener('click', () =>{
+        talles = input3.value;
+    });
+
+    let talle = talles;
+
+    color = document.getElementById("color2").value;
+
+    cantidad = document.getElementById("cantidad2").value;
+
+    let tapadoHimalaya = new Producto (2,'Tapado Himalaya',37485,color, talle,'mujer',cantidad);
+
+    if(tapadoHimalaya.color == "" || tapadoHimalaya.talle == "" ||  tapadoHimalaya.cantidad == 0){
+        Swal.fire({
+            position: 'top-center',
+            icon: 'error',
+            title: 'Falta completar algun dato',
+            showConfirmButton: false,
+            timer: 1500
+            })
+    } else {
+        Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Pruducto agregado correctamente!',
+            showConfirmButton: false,
+            timer: 1500
+        });
+        carrito.push(tapadoHimalaya);
+        carritoLs = carrito.map(carroLs => carroLs = {id: carroLs.id, nombre: carroLs.nombre, precio: carroLs.precio, color: carroLs.color, talle: carroLs.talle, categoria: carroLs.categoria, cantidad: carroLs.cantidad});
+        localStorage.setItem('datosProductos', JSON.stringify(carritoLs));
+        
+        colores.value = "";
+        cant.value = 0;
+        talles = "";
+    }
+    console.log(carrito);
+}
+
+
+let input1; 
+let input2; 
+let input3; 
+let colores; 
+let cant;
+let talles;
+
+
+
+let botonPalazo = document.getElementById("boton__agregarPalazo");
+botonPalazo.addEventListener('click', agregarPalazo);
+
+let botonTapado = document.getElementById("boton__agregarTapado");
+botonTapado.addEventListener('click', agregarTapado);
+
+localStorage.getItem("datosProductos") ? carrito = JSON.parse(localStorage.getItem("datosProductos")) : carrito = [];
+
+
